@@ -1,0 +1,2635 @@
+<section xmlns:mim="http://www.geostandaarden.nl/mim/mim-core/1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mim-ref="http://www.geostandaarden.nl/mim/mim-ref/1.0" xmlns:mim-ext="http://www.geostandaarden.nl/mim/mim-ext/1.0" id="cat" class="normative"><h2>Gegevensdefinitie</h2>
+<section id="overzicht"><h3>Overzicht informatiemodel</h3>
+<figure><pre class="diagram mermaid">
+		
+		classDiagram	
+		direction TB
+		
+class Aannemer			
+	    click Aannemer href "#U14842e93-d433-425d-8fba-dc205bc9f12e" "Aannemer"
+	
+class Locomotief			
+	    click Locomotief href "#U1788475b-d276-414b-80ff-af3a7d8c69bf" "Locomotief"
+	
+class Organisatie			
+	    click Organisatie href "#U0f29cd1c-f97f-4175-8ba5-5129d7cf99f2" "Organisatie"
+	
+class Overweg			
+	    Spoorelement &lt;|-- Overweg			
+			click Overweg href "#Uda35442b-ae80-4016-9c20-f677efa2ed14" "Overweg"
+	
+class Plaats			
+	    click Plaats href "#Uf9f82467-3fe0-4a5a-baa5-cd512408fb84" "Plaats"
+	
+class Route			
+	    click Route href "#U1706412c-bc72-4f77-ac39-e5daa4f3388b" "Route"
+	
+class Spoorelement			
+	    click Spoorelement href "#U75516469-5593-4604-a88b-6da20b466b42" "Spoorelement"
+	
+class Spoortak			
+	    Spoorelement &lt;|-- Spoortak			
+			click Spoortak href "#Ucb12fb3c-5088-4aeb-9f4b-2737badb7c04" "Spoortak"
+	
+class Station			
+	    Plaats &lt;-- Station			
+			click Station href "#Uf913130a-1064-4de4-b898-52c5143bad5c" "Station"
+	
+class Trein			
+	    Treinrit &lt;-- Trein			
+			click Trein href "#U85bb033f-e9f0-49d5-a53e-5e4b8f2ac290" "Trein"
+	
+class Treinrit			
+	    Station &lt;-- Treinrit			
+			Station &lt;-- Treinrit			
+			 &lt;-- Treinrit			
+			Route &lt;-- Treinrit			
+			click Treinrit href "#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65" "Treinrit"
+	
+class Vervoerder			
+	    click Vervoerder href "#Uf3468b58-a6fb-41d9-a631-7d219aed39ca" "Vervoerder"
+	
+class Wagon			
+	    click Wagon href "#U2e1075a1-aa55-4230-8be0-0c7126129011" "Wagon"
+	
+class Wissel			
+	    Spoorelement &lt;|-- Wissel			
+			click Wissel href "#U69a6055d-7d09-4d7b-bc05-13d0d1ea8700" "Wissel"
+	</pre>
+<figcaption>Klassendiagram domein </figcaption></figure></section><section id="objecttypen"><h3>Objecttypen</h3>
+<section id="U14842e93-d433-425d-8fba-dc205bc9f12e"><h4>Aannemer</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Aannemer{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Aannemer {
+	  +naam : Aannemerslijst [1]}
+	  </pre>
+<figcaption>Klassendiagram Aannemer</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Aannemer</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Organisatie die in opdracht werkzaamheden aan of ten behoeve van de spoorinfrastructuur uitvoert.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht generalisaties</h5>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#Ufd44e057-8e4e-4a90-b8f0-77a1df4181e8">naam</a></td>
+<td></td>
+<td><a href="#U96cc9947-0083-4ad0-bfc6-59b173f58c14">Aannemerslijst</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="U1788475b-d276-414b-80ff-af3a7d8c69bf"><h4>Locomotief</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Locomotief{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Locomotief {
+	  +tractie :  [1]}
+	  </pre>
+<figcaption>Klassendiagram Locomotief</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Locomotief</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Spoorvoertuig dat trekkracht levert voor het voortbewegen van een trein.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U3a70fb67-d756-4509-bd8b-283c557db05d">tractie</a></td>
+<td></td>
+<td><a href="#"></a></td>
+<td>1</td>
+</tr>
+</table></section><section id="U0f29cd1c-f97f-4175-8ba5-5129d7cf99f2"><h4>Organisatie</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Organisatie{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Organisatie {
+	  +adres : Adres [1]}
+	  
+	class Organisatie {
+	  +telefoonnummer : Telefoonnummer [1]}
+	  </pre>
+<figcaption>Klassendiagram Organisatie</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Organisatie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Georganiseerd samenwerkingsverband dat als zelfstandige eenheid activiteiten uitvoert.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U9c4f9253-59c3-430d-94cc-33cda1581388">adres</a></td>
+<td></td>
+<td><a href="#U2673e3a9-b578-460e-8b38-ab70d35a073e">Adres</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#U94930bc1-a212-4635-bd41-1de177f77f38">telefoonnummer</a></td>
+<td></td>
+<td><a href="#U7e514ce5-1a5c-48b5-b820-749daed13626">Telefoonnummer</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="Uda35442b-ae80-4016-9c20-f677efa2ed14"><h4>Overweg</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Spoorelement:::abstractObject{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+	Spoorelement &lt;|-- Overweg
+		click Spoorelement href "#U75516469-5593-4604-a88b-6da20b466b42" "Spoorelement"
+		class Overweg{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Overweg {
+	  +geometrie : GM_Surface [1]}
+	  
+	class Overweg {
+	  +indicatieBeveiligd : Boolean [1]}
+	  </pre>
+<figcaption>Klassendiagram Overweg</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Overweg</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Kruising op gelijk niveau van een spoorweg en een andere verkeersweg.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht generalisaties</h5>
+<h6>Spoorelement</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Supertype</th>
+<td><a href="#U75516469-5593-4604-a88b-6da20b466b42">Spoorelement</a></td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>
+<a href="#Uda35442b-ae80-4016-9c20-f677efa2ed14">Overweg</a> is een subtype van <a href="#U75516469-5593-4604-a88b-6da20b466b42">Spoorelement</a>
+</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#Ufbdcce69-1d4a-4fa0-80c0-7ef0eb1775f6">geometrie</a></td>
+<td></td>
+<td><a href="#Uc63a7a13-a22a-4ad1-be5e-e5271b3b2fc0">GM_Surface</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Ud50a11f0-1715-4ce7-8da7-ef3c0f18c30f">indicatieBeveiligd</a></td>
+<td></td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#primitief-datatype-1" target="_blank">Boolean</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="Uf9f82467-3fe0-4a5a-baa5-cd512408fb84"><h4>Plaats</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Plaats{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Plaats {
+	  +isStad : Boolean [1]}
+	  </pre>
+<figcaption>Klassendiagram Plaats</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Plaats</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Geografisch bepaalde locatie.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U1e6fd8ed-31a1-4de2-9396-52ed3c9e9dd2">isStad</a></td>
+<td></td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#primitief-datatype-1" target="_blank">Boolean</a></td>
+<td>1</td>
+</tr>
+</table>
+<h5>Overzicht relaties</h5>
+<table><tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Doel</th>
+<th>Kard</th>
+</tr></table></section><section id="U1706412c-bc72-4f77-ac39-e5daa4f3388b"><h4>Route</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Route{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Route {
+	  +geometrie :  [1]}
+	  </pre>
+<figcaption>Klassendiagram Route</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Route</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Opeenvolging van spoorelementen waarlangs een treinrit wordt uitgevoerd.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U85e49381-5a07-4fa0-8cff-153f9d716a12">geometrie</a></td>
+<td></td>
+<td><a href="#"></a></td>
+<td>1</td>
+</tr>
+</table>
+<h5>Overzicht relaties</h5>
+<table><tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Doel</th>
+<th>Kard</th>
+</tr></table></section><section id="U75516469-5593-4604-a88b-6da20b466b42"><h4>Spoorelement</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Spoorelement:::abstractObject{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Spoorelement {
+	  +identificatie : PUIC [1]}
+	  </pre>
+<figcaption>Klassendiagram Spoorelement</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Spoorelement</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Onderdeel van de spoorinfrastructuur waarover of waarlangs treinverkeer plaatsvindt.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Ja
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U7dcb552f-97a1-4455-9fc7-af62e387226f">identificatie</a></td>
+<td></td>
+<td><a href="#U02324e55-e483-4165-b0a7-5d90d3bcea55">PUIC</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="Ucb12fb3c-5088-4aeb-9f4b-2737badb7c04"><h4>Spoortak</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Spoorelement:::abstractObject{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+	Spoorelement &lt;|-- Spoortak
+		click Spoorelement href "#U75516469-5593-4604-a88b-6da20b466b42" "Spoorelement"
+		class Spoortak{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Spoortak {
+	  +geometrie : GM_LineString [1]}
+	  </pre>
+<figcaption>Klassendiagram Spoortak</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Spoortak</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Spoorelement bestaande uit een doorgaand gedeelte spoor tussen twee aansluitpunten.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht generalisaties</h5>
+<h6>Spoorelement</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Supertype</th>
+<td><a href="#U75516469-5593-4604-a88b-6da20b466b42">Spoorelement</a></td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>
+<a href="#Ucb12fb3c-5088-4aeb-9f4b-2737badb7c04">Spoortak</a> is een subtype van <a href="#U75516469-5593-4604-a88b-6da20b466b42">Spoorelement</a>
+</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U885ad3b9-b887-4aba-bdfc-753698cc4719">geometrie</a></td>
+<td></td>
+<td><a href="#U90899876-8f1a-4db6-a24a-cceb131009b6">GM_LineString</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="Uf913130a-1064-4de4-b898-52c5143bad5c"><h4>Station</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Station{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Station {
+	  +identificatie : Stationsidentificatie [1]}
+	  
+	class Station {
+	  +naam : CharacterString [1]}
+	  
+	class Station {
+	  +locatie : PuntgeometrieOfKilometrering [1]}
+	  Station --&gt; "1 plaats"  Plaats : ligt in
+		class Plaats{
+					&lt;&lt;Objecttype&gt;&gt;       
+				}
+		click Plaats href "#Uf9f82467-3fe0-4a5a-baa5-cd512408fb84" "Plaats"
+		</pre>
+<figcaption>Klassendiagram Station</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Station</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Plaats langs het spoor waar treinen kunnen stoppen voor het in- en uitstappen van reizigers of het laden en lossen van goederen.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#Ub51965e5-2339-43f9-89a1-07d81f6ff297">identificatie</a></td>
+<td></td>
+<td><a href="#U747ed223-2e99-417d-b6c2-aa2506432974">Stationsidentificatie</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Ud4ed52f8-5bcd-43c3-8d98-5aba83e0197c">naam</a></td>
+<td></td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#primitief-datatype-1" target="_blank">CharacterString</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#U052c81a7-dc74-457e-b47f-b009e7ec45cf">locatie</a></td>
+<td></td>
+<td><a href="#Uc03e2c7a-62ad-45ad-acbc-ac3e114f0dbf">PuntgeometrieOfKilometrering</a></td>
+<td>1</td>
+</tr>
+</table>
+<h5>Overzicht relaties</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Doel</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U63e9f897-7933-4d43-9058-f78ab308bc39">ligt in</a></td>
+<td></td>
+<td><a href="#Uf9f82467-3fe0-4a5a-baa5-cd512408fb84">Plaats</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="U85bb033f-e9f0-49d5-a53e-5e4b8f2ac290"><h4>Trein</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Trein{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Trein {
+	  +lengte : Real [1]}
+	  Trein --&gt; "0..* treinrit"  Treinrit : voert uit
+		class Treinrit{
+					&lt;&lt;Objecttype&gt;&gt;       
+				}
+		click Treinrit href "#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65" "Treinrit"
+		</pre>
+<figcaption>Klassendiagram Trein</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Trein</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Samenstelling van één of meer spoorvoertuigen die als eenheid over het spoor rijdt.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U72eb546b-8df9-4708-b695-3e2e3855d963">lengte</a></td>
+<td></td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#primitief-datatype-1" target="_blank">Real</a></td>
+<td>1</td>
+</tr>
+</table>
+<h5>Overzicht relaties</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Doel</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#Ub0b667c6-da89-4128-990e-5f780b2b0642">voert uit</a></td>
+<td></td>
+<td><a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65">Treinrit</a></td>
+<td>0..*</td>
+</tr>
+</table></section><section id="Ud12bd6d4-4a38-420b-bc37-3fb410d16a65"><h4>Treinrit</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Treinrit{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Treinrit {
+	  +treinsoort : SoortTrein [1]}
+	  
+	class Treinrit {
+	  +treinnummer :  [1]}
+	  
+	  
+	  class  {
+	  &lt;&lt;Gegevensgroeptype&gt;&gt;    
+		     
+	  }
+		
+	  click  href "#" ""
+	
+	class Treinrit {
+	  +dienstregeling : Dienstregelmoment [1]}
+	  
+	  
+	  class Dienstregelmoment {
+	  &lt;&lt;Gegevensgroeptype&gt;&gt;    
+		     
+	  }
+		
+	  click Dienstregelmoment href "#U49a6b714-0a88-4cb9-8a0d-b8b72cbffe79" "Dienstregelmoment"
+	Treinrit --&gt; "1 beginstation"  Station : begint op
+		class Station{
+					&lt;&lt;Objecttype&gt;&gt;       
+				}
+		click Station href "#Uf913130a-1064-4de4-b898-52c5143bad5c" "Station"
+		Treinrit --&gt; "1 eindstation"  Station : eindigt op
+		class Station{
+					&lt;&lt;Objecttype&gt;&gt;       
+				}
+		click Station href "#Uf913130a-1064-4de4-b898-52c5143bad5c" "Station"
+		Treinrit --&gt; "1 uitvoerder"  Uitvoerder : wordt uitgevoerd door
+		class Uitvoerder{
+					&lt;&lt;Objecttype&gt;&gt;       
+				}
+		click Uitvoerder href "#Uce0b1c76-ecb5-4122-9d7a-67e56a77faca" "Uitvoerder"
+		Treinrit --&gt; "1 route"  Route : volgt
+		class Route{
+					&lt;&lt;Objecttype&gt;&gt;       
+				}
+		click Route href "#U1706412c-bc72-4f77-ac39-e5daa4f3388b" "Route"
+		</pre>
+<figcaption>Klassendiagram Treinrit</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Treinrit</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Verplaatsing van een trein volgens een geplande route van een vertrekstation naar een aankomststation.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#Ua52129d3-e63c-41e6-bc44-b5aa106f3a8a">treinsoort</a></td>
+<td></td>
+<td><a href="#U03812c7e-fb0a-4138-9028-c8f66873dcf4">SoortTrein</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Uda2d7df7-5bcb-46da-a985-2e156b7bccc9">treinnummer</a></td>
+<td></td>
+<td><a href="#"></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Uef7a68aa-ddaa-4528-a795-b841be9c9f8b">dienstregeling</a></td>
+<td></td>
+<td><a href="#U49a6b714-0a88-4cb9-8a0d-b8b72cbffe79">Dienstregelmoment</a></td>
+<td>1</td>
+</tr>
+</table>
+<h5>Overzicht relaties</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Doel</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#Uaafd620e-abec-4835-9ebb-ea7b80d104d3">begint op</a></td>
+<td></td>
+<td><a href="#Uf913130a-1064-4de4-b898-52c5143bad5c">Station</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Uba0b844b-e070-40bf-81d0-d0e0104a01c1">eindigt op</a></td>
+<td></td>
+<td><a href="#Uf913130a-1064-4de4-b898-52c5143bad5c">Station</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Ua04b5e9c-6de8-4aa7-ba44-37960d2f4a95">wordt uitgevoerd door</a></td>
+<td></td>
+<td><a href="#Uce0b1c76-ecb5-4122-9d7a-67e56a77faca">Uitvoerder</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#U07397ce5-aa8f-4db0-9359-ae10352b2f31">volgt</a></td>
+<td></td>
+<td><a href="#U1706412c-bc72-4f77-ac39-e5daa4f3388b">Route</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="Uf3468b58-a6fb-41d9-a631-7d219aed39ca"><h4>Vervoerder</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Vervoerder{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Vervoerder {
+	  +naam : Vervoerderslijst [1]}
+	  </pre>
+<figcaption>Klassendiagram Vervoerder</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Vervoerder</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Organisatie die vervoer van reizigers of goederen per trein uitvoert.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht generalisaties</h5>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U58f80d31-7c73-49b9-8ccd-141bc06f6cc4">naam</a></td>
+<td></td>
+<td><a href="#U8058687c-65e5-4ea2-91ed-76778d086502">Vervoerderslijst</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="U2e1075a1-aa55-4230-8be0-0c7126129011"><h4>Wagon</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Wagon{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			</pre>
+<figcaption>Klassendiagram Wagon</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Wagon</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Spoorvoertuig dat onderdeel is van een trein en bestemd is voor het vervoeren van reizigers of goederen.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table></section><section id="U69a6055d-7d09-4d7b-bc05-13d0d1ea8700"><h4>Wissel</h4>
+<figure><pre class="diagram mermaid">
+		classDiagram		   
+		   class Spoorelement:::abstractObject{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+	Spoorelement &lt;|-- Wissel
+		click Spoorelement href "#U75516469-5593-4604-a88b-6da20b466b42" "Spoorelement"
+		class Wissel{
+		   		&lt;&lt;Objecttype&gt;&gt;       
+		    }
+			
+	class Wissel {
+	  +geometrie : GM_Point [1]}
+	  
+	class Wissel {
+	  +indicatieVerwarmd : Boolean [1]}
+	  
+	class Wissel {
+	  +laatsteOnderhoud : Onderhoud [1]}
+	  </pre>
+<figcaption>Klassendiagram Wissel</figcaption></figure><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Wissel</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Spoorelement waarmee spoorvoertuigen van de ene spoortak naar een andere spoortak kunnen worden geleid.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht generalisaties</h5>
+<h6>Spoorelement</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Supertype</th>
+<td><a href="#U75516469-5593-4604-a88b-6da20b466b42">Spoorelement</a></td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>
+<a href="#U69a6055d-7d09-4d7b-bc05-13d0d1ea8700">Wissel</a> is een subtype van <a href="#U75516469-5593-4604-a88b-6da20b466b42">Spoorelement</a>
+</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#U37d1bae4-9af2-4108-8431-91d99552983f">geometrie</a></td>
+<td></td>
+<td><a href="#U226772ae-dfcd-4719-b01c-8423b4e71ca1">GM_Point</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Uc98fb647-2184-4595-bd19-796048b09515">indicatieVerwarmd</a></td>
+<td></td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#primitief-datatype-1" target="_blank">Boolean</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#U71903b19-ffa2-4516-823e-74221630d737">laatsteOnderhoud</a></td>
+<td></td>
+<td><a href="#U895987f9-c8b1-4529-9489-2578d1c88ec9">Onderhoud</a></td>
+<td>1</td>
+</tr>
+</table></section></section><section id="gegevensgroeptypen"><h3>Gegevensgroeptypen</h3>
+<section id="U49a6b714-0a88-4cb9-8a0d-b8b72cbffe79"><h4>Dienstregelmoment</h4>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Dienstregelmoment</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Samenhangende gegevens over de datum en de geplande aankomst- en vertrektijd van een trein.</td>
+</tr>
+<tr>
+<th>Herkomst definitie</th>
+<td>Samenhangende gegevens over de datum en de geplande aankomst- en vertrektijd van een trein.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht attributen</h5>
+<table>
+<tr>
+<th>Naam</th>
+<th>Definitie</th>
+<th>Type</th>
+<th>Kard</th>
+</tr>
+<tr>
+<td><a href="#Ue4c6c092-2267-4c4e-bfd3-53f598178cad">datum</a></td>
+<td></td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#primitief-datatype-1" target="_blank">Date</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Ua2c4e9f9-3874-4096-a433-3a749bf1c9c7">vertrektijd</a></td>
+<td></td>
+<td><a href="#U32326772-0fcf-4a20-9c13-bb37e5e17989">Tijd</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#Udb71767c-be69-4c97-8f22-78bbb3e502da">aankomststijd</a></td>
+<td></td>
+<td><a href="#U32326772-0fcf-4a20-9c13-bb37e5e17989">Tijd</a></td>
+<td>1</td>
+</tr>
+</table></section><section id="U38c4c4c4-e5d7-43ec-8e2a-30f9a6df4cdd"><h4>Treinnummer</h4>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Treinnummer</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Identificerend nummer waarmee een trein of treinrit wordt aangeduid.</td>
+</tr>
+<tr>
+<th>Herkomst definitie</th>
+<td>Identificerend nummer waarmee een trein of treinrit wordt aangeduid.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>
+			  Nee
+			</td>
+</tr>
+</tbody>
+</table></section></section><section id="datatypen"><h3>Datatypen</h3>
+<section id="primitieve-datatypen"><h4>Primitieve datatypen</h4></section><section id="enumeraties"><h4>Enumeraties</h4>
+<section id="U3be0a777-47d7-4d5c-9012-1c5dc040c0e5"><h4>SoortAannemer</h4>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>SoortAannemer</td>
+</tr>		
+&gt;
+		<tr>
+<th>Definitie</th>
+<td>Verzameling met soorten aannemers naar de aard van de werkzaamheden die zij uitvoeren.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht waarden</h5>
+<table>
+<tr>
+<th>Waarde</th>
+<th>Definitie</th>
+</tr>
+<tr>
+<td><a href="#U9716ffd0-5ad8-4b74-af2e-83d08db2e899">ingenieursbureau</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#Uaf1ac4f0-ef03-478b-b495-d7d6dd434e58">onderhoudsaannemer</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#U364b88d6-1f87-4fbc-bd9c-18bee35c8971">bouwaannemer</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#U4815f312-b16c-46d6-ac3b-38a1e8de8c10">inspectiebedrijf</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#Uf9c0a8ed-950b-44e2-bc18-d559dd545dbd">meetbedrijf</a></td>
+<td></td>
+</tr>
+</table></section><section id="U03812c7e-fb0a-4138-9028-c8f66873dcf4"><h4>SoortTrein</h4>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>SoortTrein</td>
+</tr>		
+&gt;
+		<tr>
+<th>Definitie</th>
+<td>Verzameling met soorten trein naar hun aard of gebruiksdoel.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht waarden</h5>
+<table>
+<tr>
+<th>Waarde</th>
+<th>Definitie</th>
+</tr>
+<tr>
+<td><a href="#U46349721-e7dc-47a9-a4ac-88c99311317e">reizigerstrein</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#Uc070a730-7dd3-4ec4-a38e-ee2b9ad50f47">goederentrein</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#Uc28f5212-a3bd-4051-808b-e81d36393555">onderhoudstrein</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#Ua19731f6-fc2b-48b0-8ec2-39f58495755a">meettrein</a></td>
+<td></td>
+</tr>
+</table></section><section id="U38d44195-6953-45bb-b288-f1cbd71ba049"><h4>Tractie</h4>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>Tractie</td>
+</tr>		
+&gt;
+		<tr>
+<th>Definitie</th>
+<td>Verzameling met typen voor de wijze waarop de aandrijfkracht voor een trein wordt geleverd.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht waarden</h5>
+<table>
+<tr>
+<th>Waarde</th>
+<th>Definitie</th>
+</tr>
+<tr>
+<td><a href="#Uc112a040-d49b-4c27-9585-824d17ced89d">elektrisch</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#U454d067f-a21c-4b51-93f1-166902c3674e">diesel</a></td>
+<td></td>
+</tr>
+</table></section><section id="U075ecb7b-1baf-4512-98b9-adb7c4fc75a4"><h4>TypeVervoerder</h4>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>TypeVervoerder</td>
+</tr>		
+&gt;
+		<tr>
+<th>Definitie</th>
+<td>Verzameling met typen vervoerders naar het soort vervoer dat zij uitvoeren.</td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table>
+<h5>Overzicht waarden</h5>
+<table>
+<tr>
+<th>Waarde</th>
+<th>Definitie</th>
+</tr>
+<tr>
+<td><a href="#Ub80a04be-1e24-413c-b031-215ee51b5980">reizigersvervoerder</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#U4952d871-55ef-4905-9cbb-7f5898798b81">goederenvervoerder</a></td>
+<td></td>
+</tr>
+</table></section></section></section><section id="attribuutdetails"><h3>Attribuut-, relatiesoort en enumeratiewaardedetails</h3>
+<section id="objecttypedetails"><h4>Objecttype details</h4>
+<section><h5>Aannemer</h5>
+<section id="Ufd44e057-8e4e-4a90-b8f0-77a1df4181e8"><h6>
+        Attribuutsoort details      
+        
+        naam</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>naam</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U96cc9947-0083-4ad0-bfc6-59b173f58c14">Aannemerslijst</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Locomotief</h5>
+<section id="U3a70fb67-d756-4509-bd8b-283c557db05d"><h6>
+        Attribuutsoort details      
+        
+        tractie</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>tractie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#"></a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Organisatie</h5>
+<section id="U9c4f9253-59c3-430d-94cc-33cda1581388"><h6>
+        Attribuutsoort details      
+        
+        adres</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>adres</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U2673e3a9-b578-460e-8b38-ab70d35a073e">Adres</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="U94930bc1-a212-4635-bd41-1de177f77f38"><h6>
+        Attribuutsoort details      
+        
+        telefoonnummer</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>telefoonnummer</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U7e514ce5-1a5c-48b5-b820-749daed13626">Telefoonnummer</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Overweg</h5>
+<section id="Ufbdcce69-1d4a-4fa0-80c0-7ef0eb1775f6"><h6>
+        Attribuutsoort details      
+        
+        geometrie</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>geometrie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#Uc63a7a13-a22a-4ad1-be5e-e5271b3b2fc0">GM_Surface</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="Ud50a11f0-1715-4ce7-8da7-ef3c0f18c30f"><h6>
+        Attribuutsoort details      
+        
+        indicatieBeveiligd</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>indicatieBeveiligd</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U324f0f00-e6f6-48ee-90a3-7d18aff70ec0">Boolean</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Plaats</h5>
+<section id="U1e6fd8ed-31a1-4de2-9396-52ed3c9e9dd2"><h6>
+        Attribuutsoort details      
+        
+        isStad</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>isStad</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U324f0f00-e6f6-48ee-90a3-7d18aff70ec0">Boolean</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Route</h5>
+<section id="U85e49381-5a07-4fa0-8cff-153f9d716a12"><h6>
+        Attribuutsoort details      
+        
+        geometrie</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>geometrie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#"></a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Spoorelement</h5>
+<section id="U7dcb552f-97a1-4455-9fc7-af62e387226f"><h6>
+        Attribuutsoort details      
+        
+        identificatie</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>identificatie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U02324e55-e483-4165-b0a7-5d90d3bcea55">PUIC</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie identificerend</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Spoortak</h5>
+<section id="U885ad3b9-b887-4aba-bdfc-753698cc4719"><h6>
+        Attribuutsoort details      
+        
+        geometrie</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>geometrie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U90899876-8f1a-4db6-a24a-cceb131009b6">GM_LineString</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Station</h5>
+<section id="Ub51965e5-2339-43f9-89a1-07d81f6ff297"><h6>
+        Attribuutsoort details      
+        
+        identificatie</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>identificatie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U747ed223-2e99-417d-b6c2-aa2506432974">Stationsidentificatie</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie identificerend</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="Ud4ed52f8-5bcd-43c3-8d98-5aba83e0197c"><h6>
+        Attribuutsoort details      
+        
+        naam</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>naam</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U9b19be03-1bc1-4c7d-b2ff-5ac77e5c1eb1">CharacterString</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="U052c81a7-dc74-457e-b47f-b009e7ec45cf"><h6>
+        Attribuutsoort details      
+        
+        locatie</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>locatie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#Uc03e2c7a-62ad-45ad-acbc-ac3e114f0dbf">PuntgeometrieOfKilometrering</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="U63e9f897-7933-4d43-9058-f78ab308bc39"><h6>
+        Relatiesoort details
+        
+        <a href="#Uf913130a-1064-4de4-b898-52c5143bad5c">Station</a>ligt in<a href="#Uf913130a-1064-4de4-b898-52c5143bad5c"></a>
+</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>ligt in</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Kardinaliteit bron</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Relatierol doel</th>
+<td><a href="#U80f27755-bb09-4b3a-b65a-870e9c0bbfa3">plaats</a></td>
+</tr>
+</tbody>
+</table>
+<section id="U80f27755-bb09-4b3a-b65a-870e9c0bbfa3"><h7>
+        Doelrelatierol details
+        plaats</h7><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>plaats</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section></section><section><h5>Trein</h5>
+<section id="U72eb546b-8df9-4708-b695-3e2e3855d963"><h6>
+        Attribuutsoort details      
+        
+        lengte</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>lengte</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#Uf387709b-295a-42a3-b95f-a35b4ba1a210">Real</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="Ub0b667c6-da89-4128-990e-5f780b2b0642"><h6>
+        Relatiesoort details
+        
+        <a href="#U85bb033f-e9f0-49d5-a53e-5e4b8f2ac290">Trein</a>voert uit<a href="#U85bb033f-e9f0-49d5-a53e-5e4b8f2ac290"></a>
+</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>voert uit</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>0..*</td>
+</tr>
+<tr>
+<th>Kardinaliteit bron</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Relatierol doel</th>
+<td><a href="#U37d51999-57e2-46f4-b7cc-b406db33dea2">treinrit</a></td>
+</tr>
+</tbody>
+</table>
+<section id="U37d51999-57e2-46f4-b7cc-b406db33dea2"><h7>
+        Doelrelatierol details
+        treinrit</h7><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>treinrit</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>0..*</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section></section><section><h5>Treinrit</h5>
+<section id="Ua52129d3-e63c-41e6-bc44-b5aa106f3a8a"><h6>
+        Attribuutsoort details      
+        
+        treinsoort</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>treinsoort</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U03812c7e-fb0a-4138-9028-c8f66873dcf4">SoortTrein</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="Uaafd620e-abec-4835-9ebb-ea7b80d104d3"><h6>
+        Relatiesoort details
+        
+        <a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65">Treinrit</a>begint op<a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65"></a>
+</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>begint op</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Kardinaliteit bron</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Relatierol doel</th>
+<td><a href="#U00aec0e9-0cdc-4c86-8ff7-12362b984452">beginstation</a></td>
+</tr>
+</tbody>
+</table>
+<section id="U00aec0e9-0cdc-4c86-8ff7-12362b984452"><h7>
+        Doelrelatierol details
+        beginstation</h7><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>beginstation</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section id="Uba0b844b-e070-40bf-81d0-d0e0104a01c1"><h6>
+        Relatiesoort details
+        
+        <a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65">Treinrit</a>eindigt op<a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65"></a>
+</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>eindigt op</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Kardinaliteit bron</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Relatierol doel</th>
+<td><a href="#Uc5683d91-ed39-4016-aebe-d708fb7d5146">eindstation</a></td>
+</tr>
+</tbody>
+</table>
+<section id="Uc5683d91-ed39-4016-aebe-d708fb7d5146"><h7>
+        Doelrelatierol details
+        eindstation</h7><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>eindstation</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section id="Ua04b5e9c-6de8-4aa7-ba44-37960d2f4a95"><h6>
+        Relatiesoort details
+        
+        <a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65">Treinrit</a>wordt uitgevoerd door<a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65"></a>
+</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>wordt uitgevoerd door</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Kardinaliteit bron</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Relatierol doel</th>
+<td><a href="#U99caca5d-b871-49cc-9395-484deff26244">uitvoerder</a></td>
+</tr>
+</tbody>
+</table>
+<section id="U99caca5d-b871-49cc-9395-484deff26244"><h7>
+        Doelrelatierol details
+        uitvoerder</h7><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>uitvoerder</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section id="U07397ce5-aa8f-4db0-9359-ae10352b2f31"><h6>
+        Relatiesoort details
+        
+        <a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65">Treinrit</a>volgt<a href="#Ud12bd6d4-4a38-420b-bc37-3fb410d16a65"></a>
+</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>volgt</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Kardinaliteit bron</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Relatierol doel</th>
+<td><a href="#U7ad8f40e-09b6-4e9a-9e4f-1b6694cf3fcc">route</a></td>
+</tr>
+</tbody>
+</table>
+<section id="U7ad8f40e-09b6-4e9a-9e4f-1b6694cf3fcc"><h7>
+        Doelrelatierol details
+        route</h7><table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>route</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section></section><section><h5>Vervoerder</h5>
+<section id="U58f80d31-7c73-49b9-8ccd-141bc06f6cc4"><h6>
+        Attribuutsoort details      
+        
+        naam</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>naam</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U8058687c-65e5-4ea2-91ed-76778d086502">Vervoerderslijst</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section><section><h5>Wissel</h5>
+<section id="U37d1bae4-9af2-4108-8431-91d99552983f"><h6>
+        Attribuutsoort details      
+        
+        geometrie</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>geometrie</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U226772ae-dfcd-4719-b01c-8423b4e71ca1">GM_Point</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="Uc98fb647-2184-4595-bd19-796048b09515"><h6>
+        Attribuutsoort details      
+        
+        indicatieVerwarmd</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>indicatieVerwarmd</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U324f0f00-e6f6-48ee-90a3-7d18aff70ec0">Boolean</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section><section id="U71903b19-ffa2-4516-823e-74221630d737"><h6>
+        Attribuutsoort details      
+        
+        laatsteOnderhoud</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>laatsteOnderhoud</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+<tr>
+<th>Type</th>
+<td><a href="#U895987f9-c8b1-4529-9489-2578d1c88ec9">Onderhoud</a></td>
+</tr>
+<tr>
+<th>Kardinaliteit</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Mogelijk geen waarde</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn geldigheid</th>
+<td>Ja</td>
+</tr>
+<tr>
+<th>Indicatie heeft tijdlijn registratie</th>
+<td>Ja</td>
+</tr>
+</tbody>
+</table></section></section></section><section id="gestructureerddatatypedetails"><h3>GestructureerdeDatatype details</h3></section><section id="enumeratiedetails"><h4>Enumeratie details</h4>
+<section id="enumeratiedetails-SoortAannemer"><h4>SoortAannemer</h4>
+<section id="U9716ffd0-5ad8-4b74-af2e-83d08db2e899"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U3be0a777-47d7-4d5c-9012-1c5dc040c0e5">SoortAannemer</a>  ingenieursbureau</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>ingenieursbureau</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section><section id="Uaf1ac4f0-ef03-478b-b495-d7d6dd434e58"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U3be0a777-47d7-4d5c-9012-1c5dc040c0e5">SoortAannemer</a>  onderhoudsaannemer</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>onderhoudsaannemer</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section><section id="U364b88d6-1f87-4fbc-bd9c-18bee35c8971"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U3be0a777-47d7-4d5c-9012-1c5dc040c0e5">SoortAannemer</a>  bouwaannemer</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>bouwaannemer</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section><section id="U4815f312-b16c-46d6-ac3b-38a1e8de8c10"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U3be0a777-47d7-4d5c-9012-1c5dc040c0e5">SoortAannemer</a>  inspectiebedrijf</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>inspectiebedrijf</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section><section id="Uf9c0a8ed-950b-44e2-bc18-d559dd545dbd"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U3be0a777-47d7-4d5c-9012-1c5dc040c0e5">SoortAannemer</a>  meetbedrijf</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>meetbedrijf</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section></section><section id="enumeratiedetails-SoortTrein"><h4>SoortTrein</h4>
+<section id="U46349721-e7dc-47a9-a4ac-88c99311317e"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U03812c7e-fb0a-4138-9028-c8f66873dcf4">SoortTrein</a>  reizigerstrein</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>reizigerstrein</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section><section id="Uc070a730-7dd3-4ec4-a38e-ee2b9ad50f47"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U03812c7e-fb0a-4138-9028-c8f66873dcf4">SoortTrein</a>  goederentrein</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>goederentrein</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section><section id="Uc28f5212-a3bd-4051-808b-e81d36393555"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U03812c7e-fb0a-4138-9028-c8f66873dcf4">SoortTrein</a>  onderhoudstrein</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>onderhoudstrein</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section><section id="Ua19731f6-fc2b-48b0-8ec2-39f58495755a"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U03812c7e-fb0a-4138-9028-c8f66873dcf4">SoortTrein</a>  meettrein</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>meettrein</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section></section><section id="enumeratiedetails-Tractie"><h4>Tractie</h4>
+<section id="Uc112a040-d49b-4c27-9585-824d17ced89d"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U38d44195-6953-45bb-b288-f1cbd71ba049">Tractie</a>  elektrisch</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>elektrisch</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+</tbody>
+</table></section><section id="U454d067f-a21c-4b51-93f1-166902c3674e"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U38d44195-6953-45bb-b288-f1cbd71ba049">Tractie</a>  diesel</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>diesel</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+</tbody>
+</table></section></section><section id="enumeratiedetails-TypeVervoerder"><h4>TypeVervoerder</h4>
+<section id="Ub80a04be-1e24-413c-b031-215ee51b5980"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U075ecb7b-1baf-4512-98b9-adb7c4fc75a4">TypeVervoerder</a>  reizigersvervoerder</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>reizigersvervoerder</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section><section id="U4952d871-55ef-4905-9cbb-7f5898798b81"><h6>
+        Enumeratiewaarde details 
+        
+        <a href="#U075ecb7b-1baf-4512-98b9-adb7c4fc75a4">TypeVervoerder</a>  goederenvervoerder</h6>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th>Naam</th>
+<td>goederenvervoerder</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td>2025-11-01</td>
+</tr>
+</tbody>
+</table></section></section></section><section id="relatieklassedetails"><h3>Relatieklasse details</h3></section></section></section>
