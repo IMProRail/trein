@@ -5,29 +5,29 @@ loadRespecWithConfiguration({
   useLabel: true,
   license: "cc-by",
   specStatus: "WV",
-  specType: "HR",
+  specType: "IM",
   pubDomain: "dk",
   shortName: "template",
   publishDate: "2023-06-21",
   publishVersion: "0.0.3",
 
   // TODO: Verwijder voordat de release plaats vindt
-  latestVersion: "https://github.com/logius-standaarden/respec-template/",
+  latestVersion: "https://improrail.github.com/trein/",
   prevVersion: [],
 
   editors:
     [
       {
-        name: "Logius Standaarden",
-        company: "Logius",
-        companyURL: "https://logius.nl",
+        name: "Arnoud de Boer",
+        company: "ProRail",
+        companyURL: "https://www.prorail.nl",
       }
     ],
   authors:
     [
       {
-        name: "Logius Standaarden",
-        company: "Logius",
+        name: "Arnoud de Boer",
+        company: "ProRail",
         companyURL: "https://logius.nl",
       }
     ],
